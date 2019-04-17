@@ -3,15 +3,13 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start -p $PORT"
+    "start": "next start -p $PORT",
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
-    "express": "^4.16.4",
-    "express-favicon": "^2.0.1",
     "next": "^8.1.0",
     "node-sass": "^4.11.0",
-    "path": "^0.12.7",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
