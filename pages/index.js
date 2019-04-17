@@ -1,7 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import Head from "../components/head";
-import Nav from "../components/Nav";
+import Nav from "../components/nav";
+import About from "./About";
 
 import "../Styles/main.scss";
 
@@ -9,7 +10,8 @@ const Home = () => (
   <div>
     <Head title="Home" />
     <Nav />
-
+    Here is an about page
+    <About />
     <div className="hero">
       <h1 className="title">Welcome to Next!</h1>
       <p className="description">
