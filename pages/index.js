@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Head from "../components/head";
-import Nav from "../components/nav/index";
+import Nav from "../components/nav";
 import About from "./About";
 
 import "../Styles/main.scss";
