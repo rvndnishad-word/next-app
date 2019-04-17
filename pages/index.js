@@ -1,48 +1,27 @@
-import React from "react";
-import Link from "next/link";
-import Head from "../components/head";
-import Nav from "../components/nav";
-import About from "./About";
+import React, { Component } from "react";
 
-import "../Styles/main.scss";
+export default class About extends Component {
+  state = {
+    input: ""
+  };
 
-const Home = () => (
-  <div>
-    <Head title="Home" />
-    <Nav />
-    Here is an about page
-    <About />
-    <div className="hero">
-      <h1 className="title">Welcome to Next!</h1>
-      <p className="description">
-        To get started, edit <code>pages/index.js</code> and save to reload.
-      </p>
+  handleChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
 
-      <div className="row">
-        <Link href="https://github.com/zeit/next.js#getting-started">
-          <a className="card">
-            <h3>Getting Started &rarr;</h3>
-            <p>Learn more about Next on Github and in their examples</p>
-          </a>
-        </Link>
-        <Link href="https://open.segment.com/create-next-app">
-          <a className="card">
-            <h3>Examples &rarr;</h3>
-            <p>
-              Find other example boilerplates on the{" "}
-              <code>create-next-app</code> site
-            </p>
-          </a>
-        </Link>
-        <Link href="https://github.com/segmentio/create-next-app">
-          <a className="card">
-            <h3>Create Next App &rarr;</h3>
-            <p>Was this tool helpful? Let us know how we can improve it</p>
-          </a>
-        </Link>
+  render() {
+    const { input } = this.state;
+    return (
+      <div>
+        <input
+          type="text"
+          name="input"
+          onChange={this.handleChange}
+          name="input"
+          value={input}
+        />
+        {input + "Here is the input "}
       </div>
-    </div>
-  </div>
-);
-
-export default Home;
+    );
+  }
+}

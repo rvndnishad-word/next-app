@@ -7,5 +7,10 @@ module.exports = withSass({
       fs: "empty"
     };
     return config;
+  },
+  exportPathMap: () => {
+    return {
+      "/": { page: "/" }
+    };
   }
 });
